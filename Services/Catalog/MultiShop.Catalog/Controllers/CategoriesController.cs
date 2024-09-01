@@ -37,7 +37,7 @@ namespace MultiShop.Catalog.Controllers
             return Ok("Kategori basariyla eklendi.");
         }
 
-        //[HttpDelete("{id}")]
+        //[HttpDelete("{id}")] //=>makes the parameter required
         [HttpDelete]
         public async Task<IActionResult> DeleteCategory(string id)
         {
