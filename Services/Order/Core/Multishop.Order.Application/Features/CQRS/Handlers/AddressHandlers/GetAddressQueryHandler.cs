@@ -17,7 +17,7 @@ namespace Multishop.Order.Application.Features.CQRS.Handlers.AddressHandlers
         {
             _repository = repository;
         }
-        public async Task<List<GetAddressQueryResult>> Handle(GetAddressByIdQuery query)
+        public async Task<List<GetAddressQueryResult>> Handle()
         {
             var values = await _repository.GetAllAsync();
             return values.Select(x => new GetAddressQueryResult
